@@ -15,7 +15,7 @@ public class DockerConnectMySQL {
    String sql;
    
    //Class.forName("com.mysql.cj.jdbc.Driver");
-   
+   System.out.println("Connecting to database...");
     while(login) {
         try{
           	System.out.println("Connecting to database...");
@@ -29,7 +29,7 @@ public class DockerConnectMySQL {
 		Thread.sleep(10000);
             //e.printStackTrace();
         } finally {
-        	//System.out.println("Connecting to database...");
+        	System.out.println("Connecting to database...");
         }
     }
     
