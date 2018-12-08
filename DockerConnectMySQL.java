@@ -14,7 +14,7 @@ public class DockerConnectMySQL {
    Boolean login = true;
    String sql;
    
-   //Class.forName("com.mysql.cj.jdbc.Driver");
+   Class.forName("com.mysql.cj.jdbc.Driver");
    System.out.println("Connecting to database...");
     while(login) {
         try{
@@ -23,10 +23,10 @@ public class DockerConnectMySQL {
       	    conn = DriverManager.getConnection(DB_URL,USER,PASS);
             login = false; // Break out of loop because we got a connection - no exception was thrown
         }catch(SQLException se){
-		Thread.sleep(10000);
+		Thread.sleep(5000);
             //se.printStackTrace();
         }catch(Exception e){
-		Thread.sleep(10000);
+		Thread.sleep(5000);
             //e.printStackTrace();
         } finally {
         	System.out.println("Connecting to database...");
